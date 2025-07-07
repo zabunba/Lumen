@@ -62,7 +62,7 @@ LumenCSS is a preprocessor that create dynamic styles similar so SCSS but a bit 
     }
 }
 
-@for $i from 1 to 3 {
+@for $i from 1 to 11 step 5 {
     @class p-$i {
         padding: ($i * 10)px;
     }
@@ -83,6 +83,42 @@ LumenCSS is a preprocessor that create dynamic styles similar so SCSS but a bit 
     @join @block base-typography;
     animation: fade-in 0.3s ease-out;
 }
+
+@rest theme = "greg";
+
+
+@if theme == "dark" {
+    @class dark-theme {
+        background-color: #222;
+        color: #eee;
+    }
+} @elseif theme == "light" {
+    @class F-theme {
+        background-color: #f8f8f8;
+        color: #333;
+    }
+} @elseif theme == "greg" {
+    @class g-theme {
+        background-color: #f8f8f8;
+        color: #333;
+    }
+} @else {
+    @class f-theme {
+        background-color: #6c757d;
+        color: white;
+    }
+}
+
+@rest i = 1;
+
+@while i <= 7 {
+    @class cr-$i {
+        padding-left: (i * 10)px;
+    }
+    @set i = i + 1;
+}
+
+
 ```
 
 > Expected Output :
@@ -100,6 +136,34 @@ LumenCSS is a preprocessor that create dynamic styles similar so SCSS but a bit 
     padding: 15px;
     background: #f8f9fa;
 }
+.cr-1 {
+    padding-left: 10px;
+}
+.cr-2 {
+    padding-left: 20px;
+}
+.cr-3 {
+    padding-left: 30px;
+}
+.cr-4 {
+    padding-left: 40px;
+}
+.cr-5 {
+    padding-left: 50px;
+}
+.cr-6 {
+    padding-left: 60px;
+}
+.cr-7 {
+    padding-left: 70px;
+}
+.f-theme {
+    background-color: #6c757d;
+    color: white;
+}
+.math-1 {
+    color: red; background: red;
+}
 .modal {
     font-family: sans-serif;
     font-size: 16px;
@@ -109,21 +173,21 @@ LumenCSS is a preprocessor that create dynamic styles similar so SCSS but a bit 
 .p-1 {
     padding: 10px;
 }
-.p-2 {
-    padding: 20px;
+.p-11 {
+    padding: 110px;
 }
-.p-3 {
-    padding: 30px;
+.p-6 {
+    padding: 60px;
 }
 button {
-    color: #fff;
-    background-color: var(--primary-color);
-    cursor: pointer;
-    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 20px;
     background: #f8f9fa;
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
 }
 button > span {
     font-weight: bold;
@@ -144,7 +208,6 @@ button + small {
     padding: 15px;
 }
 @keyframes fade-in {
-
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -153,6 +216,5 @@ button + small {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 ```
