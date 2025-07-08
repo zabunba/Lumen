@@ -4,6 +4,12 @@ LumenCSS is a preprocessor that create dynamic styles similar so SCSS but a bit 
 ## LumenCSS
 **Lumen** offers a programming style approach, like SCSS and SASS.
 
+**Lumen** will try to have the best syntax, making so popular language syntax incorporated on the code by making possible to combine :
+> C
+> JavaScript
+> Python
+
+
 
 ### **Lumen code**
 
