@@ -1,5 +1,5 @@
 # Lumen
-Lumen is a preprocessor that create dynamic styles similar so SCSS but a bit more different
+Lumen is a preprocessor that create dynamic styles similar to SCSS and SASS but a bit more different
 
 ## Lumen
 **Lumen** offers a programming style approach, like SCSS and SASS.
