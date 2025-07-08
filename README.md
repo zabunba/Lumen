@@ -1,7 +1,7 @@
-# LumenCSS-LCSS
-LumenCSS is a preprocessor that create dynamic styles similar so SCSS but a bit more different
+# Lumen
+Lumen is a preprocessor that create dynamic styles similar so SCSS but a bit more different
 
-## LumenCSS
+## Lumen
 **Lumen** offers a programming style approach, like SCSS and SASS.
 
 **Lumen** will try to have the best syntax, making popular language syntax incorporated on the code by combining :
